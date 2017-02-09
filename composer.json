@@ -25,6 +25,9 @@
       "CodeMommy\\IsPHP\\": "source/"
     }
   },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
   "require": {
     "php": ">=5.3.0"
   }

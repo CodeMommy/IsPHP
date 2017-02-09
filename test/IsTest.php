@@ -6,42 +6,73 @@
 
 declare(strict_types = 1);
 
+require_once(__DIR__ . '/../vendor/autoload.php');
 require_once(__DIR__ . '/../source/Is.php');
 
 use PHPUnit\Framework\TestCase;
-
 use CodeMommy\IsPHP\Is;
 
 class IsTest extends TestCase
 {
     /**
-     * Test chinaCellPhoneNumber
+     * Test php
+     * @return void
      */
-    public function testChinaCellPhoneNumber()
+    public function testPHP()
     {
-        $testCase = array(
-            '13333333333'  => true,
-            '1234456'      => false,
-            '133333333333' => false
-        );
-        foreach ($testCase as $key => $value) {
-            $this->assertEquals(Is::chinaCellPhoneNumber($key), $value);
-        }
+        $this->assertTrue(Is::php());
+    }
 
+    /**
+     * China Cell Phone Number Provider
+     * @return array
+     */
+    public function chinaCellPhoneNumberProvider()
+    {
+        return array(
+            array('13333333333', true),
+            array('1234456', false),
+            array('133333333333', false)
+        );
+    }
+
+    /**
+     * Test chinaCellPhoneNumber
+     * @dataProvider chinaCellPhoneNumberProvider
+     *
+     * @param string $testCase
+     * @param bool $result
+     *
+     * @return void
+     */
+    public function testChinaCellPhoneNumber($testCase, $result)
+    {
+        $this->assertEquals($result, Is::chinaCellPhoneNumber($testCase));
+    }
+
+    /**
+     * Email Provider
+     * @return array
+     */
+    public function emailProvider()
+    {
+        return array(
+            array('abc@abc.com', true),
+            array('abc@', false)
+        );
     }
 
     /**
      * Test email
+     * @dataProvider emailProvider
+     *
+     * @param string $testCase
+     * @param bool $result
+     *
+     * @return void
      */
-    public function testEmail()
+    public function testEmail($testCase, $result)
     {
-        $testCase = array(
-            'abc@abc.com'  => true,
-            'abc@'      => false
-        );
-        foreach ($testCase as $key => $value) {
-            $this->assertEquals(Is::email($key), $value);
-        }
-
+        $this->assertEquals($result, Is::email($testCase));
     }
 }

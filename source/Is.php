@@ -46,7 +46,8 @@ class Is
      */
     public static function chinaCellPhoneNumber($number)
     {
-        if (preg_match('/^1[34578]\d{9}$/', $number)) {
+        $regularExpression = '/^1[34578]\d{9}$/';
+        if (preg_match($regularExpression, $number)) {
             return true;
         }
         return false;
