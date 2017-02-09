@@ -1,0 +1,31 @@
+{
+  "name": "codemommy/isphp",
+  "version": "0.0.1",
+  "description": "CodeMommy IsPHP can test thins true or false.",
+  "keywords": [
+    "CodeMommy",
+    "IsPHP",
+    "PHP"
+  ],
+  "license": "Apache 2.0",
+  "homepage": "http://www.codemommy.com",
+  "support": {
+    "issues": "https://github.com/CodeMommy/IsPHP/issues",
+    "source": "https://github.com/CodeMommy/IsPHP"
+  },
+  "authors": [
+    {
+      "name": "Candison November",
+      "email": "kandisheng@163.com",
+      "homepage": "http://www.kandisheng.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CodeMommy\\IsPHP\\": "source/"
+    }
+  },
+  "require": {
+    "php": ">=5.3.0"
+  }
+}
