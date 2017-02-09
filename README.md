@@ -5,6 +5,7 @@
 [![Stable](https://poser.pugx.org/CodeMommy/IsPHP/version?format=flat-square)](https://packagist.org/packages/CodeMommy/IsPHP)
 [![Unstable](https://poser.pugx.org/CodeMommy/IsPHP/v/unstable?format=flat-square)](https://packagist.org/packages/CodeMommy/IsPHP)
 [![composer.lock Available](https://poser.pugx.org/CodeMommy/IsPHP/composerlock?format=flat-square)](https://packagist.org/packages/CodeMommy/IsPHP)
+[![Build Status](https://travis-ci.org/CodeMommy/IsPHP.svg?branch=master)](https://travis-ci.org/CodeMommy/IsPHP)
 
 
 > CodeMommy IsPHP can test things true or false.
