@@ -7,7 +7,7 @@
 [![composer.lock Available](https://poser.pugx.org/CodeMommy/IsPHP/composerlock?format=flat-square)](https://packagist.org/packages/CodeMommy/IsPHP)
 
 
-CodeMommy IsPHP can test thins true or false.
+CodeMommy IsPHP can test things true or false.
 
 Visit [CodeMommy Website](http://www.codemommy.com) or [Packagist](https://packagist.org/packages/CodeMommy/IsPHP) to get more information.
 
