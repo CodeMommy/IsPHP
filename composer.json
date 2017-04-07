@@ -1,7 +1,7 @@
 {
   "name": "codemommy/isphp",
   "version": "0.0.1",
-  "description": "CodeMommy IsPHP can test things true or false.",
+  "description": "Judge condition true or false",
   "keywords": [
     "CodeMommy",
     "IsPHP",

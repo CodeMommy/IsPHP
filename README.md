@@ -8,7 +8,7 @@
 [![Build Status](https://travis-ci.org/CodeMommy/IsPHP.svg?branch=master)](https://travis-ci.org/CodeMommy/IsPHP)
 
 
-> CodeMommy IsPHP can test things true or false.
+> Judge condition true or false
 
 Visit [CodeMommy Website](http://www.codemommy.com) or [Packagist](https://packagist.org/packages/CodeMommy/IsPHP) to get more information.
 
