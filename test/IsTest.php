@@ -1,13 +1,10 @@
 <?php
 
 /**
- * @author  Candison November <www.kandisheng.com>
+ * @author Candison November <www.kandisheng.com>
  */
 
-declare(strict_types = 1);
-
-require_once(__DIR__ . '/../vendor/autoload.php');
-require_once(__DIR__ . '/../source/Is.php');
+declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 use CodeMommy\IsPHP\Is;
