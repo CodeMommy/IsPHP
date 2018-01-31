@@ -6,7 +6,10 @@
 
 declare(strict_types=1);
 
+namespace Test;
+
 use PHPUnit\Framework\TestCase;
+use CodeMommy\FilePHP\CsvIterator;
 use CodeMommy\IsPHP\Is;
 
 class IsTest extends TestCase
@@ -21,55 +24,48 @@ class IsTest extends TestCase
     }
 
     /**
-     * China Cell Phone Number Provider
-     * @return array
+     * Data Provider China Cell Phone Number
+     * @return CsvIterator
      */
-    public function chinaCellPhoneNumberProvider()
+    public function dataProviderChinaCellPhoneNumber()
     {
-        return array(
-            array('13333333333', true),
-            array('1234456', false),
-            array('133333333333', false)
-        );
+        return new CsvIterator(sprintf('%s/case/ChinaCellPhoneNumber.csv', __DIR__));
     }
 
     /**
      * Test chinaCellPhoneNumber
-     * @dataProvider chinaCellPhoneNumberProvider
-     *
+     * @dataProvider dataProviderChinaCellPhoneNumber
      * @param string $testCase
      * @param bool $result
-     *
      * @return void
      */
     public function testChinaCellPhoneNumber($testCase, $result)
     {
+        $result = intval($result) == 1 ? true : $result;
+        $result = intval($result) == 0 ? false : $result;
         $this->assertEquals($result, Is::chinaCellPhoneNumber($testCase));
     }
 
     /**
-     * Email Provider
-     * @return array
+     * Data Provider Email
+     * @return CsvIterator
      */
-    public function emailProvider()
+    public function dataProviderEmail()
     {
-        return array(
-            array('abc@abc.com', true),
-            array('abc@', false)
-        );
+        return new CsvIterator(sprintf('%s/case/Email.csv', __DIR__));
     }
 
     /**
      * Test email
-     * @dataProvider emailProvider
-     *
+     * @dataProvider dataProviderEmail
      * @param string $testCase
      * @param bool $result
-     *
      * @return void
      */
     public function testEmail($testCase, $result)
     {
+        $result = intval($result) == 1 ? true : $result;
+        $result = intval($result) == 0 ? false : $result;
         $this->assertEquals($result, Is::email($testCase));
     }
 }

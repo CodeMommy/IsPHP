@@ -11,9 +11,7 @@ class Is
 {
     /**
      * Is PHP
-     *
      * @param void
-     *
      * @return bool
      */
     public static function php()
@@ -23,9 +21,7 @@ class Is
 
     /**
      * Is Email
-     *
      * @param string $email
-     *
      * @return bool
      */
     public static function email($email)
@@ -39,14 +35,12 @@ class Is
 
     /**
      * Is China Cell Phone Number
-     *
      * @param string $number
-     *
      * @return bool
      */
     public static function chinaCellPhoneNumber($number)
     {
-        $regularExpression = '/^1[34578]\d{9}$/';
+        $regularExpression = '/^1[3456789]\d{9}$/';
         if (preg_match($regularExpression, $number)) {
             return true;
         }
